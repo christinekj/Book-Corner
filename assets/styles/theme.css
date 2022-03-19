@@ -1,0 +1,337 @@
+:root{
+    --paper: #FCFAF5;
+    --black: black;
+}
+
+body{
+    background: pink;
+    background-color: var(--paper);
+    color: var(--black);
+    font-family: rockwell, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+header {
+    text-align: center;
+}
+
+
+#navbar  {
+    max-width: 1160px;
+    width: 100%;
+    margin: 80px auto;
+    background-color: inherit;
+    /* padding: 80px 0 0; */
+
+    font-family: courier-std,monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 48px;
+    color: inherit;
+    text-decoration: none;
+    
+}
+
+ul#navbar li{
+    display: inline;
+    
+}
+
+ul#navbar li a {
+    text-decoration: none;
+    color: var(--black);
+    
+}
+
+#navbar div {
+    display: inline;
+    font-size: 20px;
+    
+}
+
+
+#intro{
+    max-width: 870px;
+    width: 100%;
+    margin: 60px auto;
+    background-color: inherit;
+    padding: 130px 0 150px;
+ 
+    position: relative;
+
+    font-size: 20px;
+    line-height: 35px;
+
+}
+
+.container p {
+    display: inline;
+}
+
+#intro .bold {
+    font-size: 40px;
+}
+
+#WantToRead .bold {
+    font-size: 30px;
+}
+
+.heading {
+    font-family: courier-std, monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 80px;
+
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: inherit;
+    padding: 0 0 100px;
+}
+/*-----------------------------------------------Currently Reading-------*/
+#CurrentlyReading {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: inherit;
+    padding: 0 0 210px;
+}
+
+#CurrentlyReading .books {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 40px;
+
+}
+
+.books .book {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    row-gap: 30px;
+}
+
+/* #CurrentlyReading img {
+    width: 300px;
+    height: auto;
+} */
+
+.books .book p {
+    font-size: 15px;
+    line-height: 23px;
+}
+
+#first, #third{
+    padding: 80px 0 0;
+}
+
+
+/*-----------------------------------------------Want To Read-------*/
+
+#WantToRead {
+    padding: 50px 0;
+}
+
+#WantToRead .shelfText {
+    max-width: 696px;
+    width: 100%;
+    margin: 50px auto;
+    font-size: 20px;
+    line-height: 35px;
+    padding: 0 0 40px;
+}
+
+#WantToRead .shelfText p {
+    display: inline;
+}
+
+#WantToRead .shelf {
+    background-color: brown;
+    background-image: url("../images/shelf.png");
+    /* background-repeat: no-repeat;
+    background-size: 100% auto */
+    height: 400px;
+    margin-bottom: 100px;
+
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    align-items: flex-end;
+    
+}
+
+#WantToRead .shelf img, input {
+    width: 90px;
+    height: 352px;
+}
+
+#WantToRead > p {
+    margin: -50px auto 0;
+    text-align: center;
+}
+
+
+
+/*-----------------------------------------------Favorites-----------*/
+
+#Favorites {
+    max-width: 1160px;
+    width: 100%;
+    margin: 100px auto;
+    padding: 50px 0 110px;
+  }
+
+ /* Style the buttons that are used to open and close the accordion panel */
+ .accordion {
+    background-color: var(--paper);
+    color: var(--black);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: thin;
+    outline: solid;
+    transition: 0.4s;
+
+    font-family: courier-std, monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 40px;
+
+
+}
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: rgb(252, 250, 245);
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: var(--paper);
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+  /* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: var(--paper);
+    /* outline: .5px solid; */
+    border: solid;
+    border-top: 0;
+    /* border-bottom: 0; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel .content {
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    column-gap: 40px;
+}
+
+.panel img {
+    /* padding: 20px; */
+    /* float: left;
+    width: 25%;
+    max-width:50%;
+    height: auto; */
+
+    width: 200px;
+    height: auto;
+    /* object-fit: contain;
+    flex-shrink: 1; */
+    
+}
+
+.panel p {
+    line-height: 20px;
+    /* flex-grow: 1; */
+
+    /* padding: 20px;
+    float: right;
+    width: 67%; */
+
+    /* flex-shrink: 1; */
+}
+
+/* ----------------------------click test--------------------------- */
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--paper);
+    padding: 3rem 3rem;
+    width: 40rem;
+    /* border-radius: 0.5rem; */
+
+    
+}
+.modal-content div {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 40px;
+}
+
+.modal-content img {
+    width: 250px;
+    height: auto;
+
+    flex-shrink: 0;
+}
+.modal-content p {
+    line-height: 20px;
+}
+
+.close-button {
+    margin: -30px -30px 0 0;
+    float: right;
+    width: 1.5rem;
+    /* height: 24px; */
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    /* border-radius: 0.25rem; */
+    background-color: var(--paper);
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+  
